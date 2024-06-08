@@ -22,8 +22,7 @@ header {
         }
 
         &-parent-label-root {
-            font-size: toRem(15);
-            font-weight: 600;
+            @include setFontProps($size: toRem(15));
             padding-right: toRem(16);
 
             &::after {
@@ -33,9 +32,8 @@ header {
         }
 
         &-parent-label:not(.nav-parent-label-root) {
-            font-size: toRem(14);
+            @include setFontProps($size: toRem(14));
             text-transform: uppercase;
-            font-weight: 600;
             padding-bottom: toRem(16);
         }
 

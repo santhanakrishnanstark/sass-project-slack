@@ -15,3 +15,32 @@
         gap: $gap;
     }
 }
+
+@mixin useShadow($x: 0, $y:0, $blur: 0, $spread:0, $color: currentColor) {
+    box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin setBorder($top: 0, $right:0, $bottom: 0, $left:0, $radius: 0) {
+    border: $top $right $bottom $left;
+
+    @if $radius {
+        border-radius: $radius;
+    }
+}
+
+@mixin setPosition($position: static, $top: unset, $right: unset, $bottom: unset, $left: unset, $zIndex: 0) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+
+    @if $zIndex {
+        z-index: $zIndex;
+    }
+}
+
+@mixin setFontProps($size: 1rem, $weight: 600) {
+    font-size: $size;
+    font-weight: $weight;
+}

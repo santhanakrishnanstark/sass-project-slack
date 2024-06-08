@@ -1,0 +1,54 @@
+.card {
+    background-color: #fff;
+    padding: toRem(12);
+    @include useShadow($blur: 2rem, $color: rgba(0, 0, 0, .1));
+    @include setBorder(0, 0, 0, 0, $radius: 0);
+    max-width: 285px;
+    min-height: 420px;
+    position: relative;
+
+    img {
+        width: 100%;
+        padding-bottom: toRem(12);
+    }
+
+    .heading {
+        line-height: toRem(30);
+        @include setFontProps($size: toRem(24), $weight: 700);
+        margin: toRem(8) 0 toRem(16);
+    }
+
+    .sub-heading {
+        color: $textGray;
+        margin-top: toRem(8);
+        @include setFontProps($size: toRem(14), $weight: 400);
+    }
+
+    .cta-link {
+        @include setFontProps($size: toRem(14), $weight: 700);
+        text-transform: uppercase;
+        letter-spacing: .8px;
+        color: $linkColor;
+    }
+
+    &-footer {
+        @include setPosition(absolute, $bottom: toRem(18));
+    }
+
+    &-tiles {
+        padding: toRem(16) toRem(16) toRem(48);
+        min-height: unset;
+
+        .heading {}
+
+        .content {}
+    }
+
+    &-showcase {
+        padding: 0;
+    }
+
+    &-product {
+        padding: toRem(24) 0;
+    }
+}
