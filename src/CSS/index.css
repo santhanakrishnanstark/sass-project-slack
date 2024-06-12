@@ -188,6 +188,14 @@ header .nav ul {
   display: flex;
   align-items: center;
 }
+@media (max-width: 799px) {
+  header .nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+}
 header .nav li {
   padding: 0.25rem 0.75rem;
 }
@@ -226,6 +234,11 @@ button {
   padding: 0.75rem 1rem;
   font-family: "Roboto", sans-serif;
 }
+@media (max-width: 799px) {
+  button {
+    width: 100%;
+  }
+}
 button.primary {
   background-color: #611f69;
   color: #fff;
@@ -243,6 +256,11 @@ button.primary:hover {
   min-height: 420px;
   position: relative;
 }
+@media (max-width: 799px) {
+  .card {
+    max-width: 100%;
+  }
+}
 .card img {
   width: 100%;
   padding-bottom: 0.75rem;
@@ -252,6 +270,11 @@ button.primary:hover {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0.5rem 0 1rem;
+}
+@media (max-width: 799px) {
+  .card .heading {
+    color: red;
+  }
 }
 .card .sub-heading {
   color: #696969;
@@ -277,6 +300,9 @@ button.primary:hover {
 .card-tiles {
   padding: 1rem 1rem 3rem;
   min-height: unset;
+}
+.card-tiles img {
+  width: 40px;
 }
 .card-showcase {
   padding: 0;

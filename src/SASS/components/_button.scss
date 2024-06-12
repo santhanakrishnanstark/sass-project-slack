@@ -11,6 +11,10 @@ button {
     padding: toRem(12) toRem(16);
     font-family: $fontPrimary;
 
+    @include respond-to('mobile') {
+        width: 100%;
+    }
+
 
     &:hover {}
 

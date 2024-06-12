@@ -14,3 +14,10 @@ $textGray: #696969;
 $primaryColor: #611f69;
 $colorWhite: #fff;
 $linkColor: #1264a3;
+
+// Responsive variable
+
+$breakpoints: ('medium': (min-width: 800px),
+    'large': (min-width: 1000px),
+    'huge': (min-width: 1200px),
+    'mobile': (max-width: 799px));

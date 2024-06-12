@@ -7,6 +7,10 @@
     min-height: 420px;
     position: relative;
 
+    @include respond-to('mobile') {
+        max-width: 100%;
+    }
+
     img {
         width: 100%;
         padding-bottom: toRem(12);
@@ -16,6 +20,10 @@
         line-height: toRem(30);
         @include setFontProps($size: toRem(24), $weight: 700);
         margin: toRem(8) 0 toRem(16);
+
+        @include respond-to('mobile') {
+            color: red;
+        }
     }
 
     .sub-heading {
@@ -38,6 +46,10 @@
     &-tiles {
         padding: toRem(16) toRem(16) toRem(48);
         min-height: unset;
+
+        img {
+            width: 40px;
+        }
 
         .heading {}
 
